@@ -10,21 +10,5 @@
   </select>
 </div>
 {{!-- container for wods --}}
-<div class="container">
-  {{#each wods}}
-  <div class="wodBox {{this.type}}">
-    <div class="wodHead">
-      <div class="wodName">{{this.name}}</div>
-      <div class="rx">{{this.rx}}</div>
-    </div>
-    <div class="format">{{this.format}}</div>
-    <div class="wod">
-      {{#each this.wod}}
-      <li>{{this}}</li>
-      {{/each}}
-    </div>
-    <button type="button" class="ChooseWod {{this.name}}">This one</button>
-  </div>
-  {{/each}}
-</div>
+<div class="container"></div>
 <script src="/js/index.js"></script>

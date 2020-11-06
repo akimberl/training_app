@@ -5,5 +5,5 @@ selectElement.addEventListener('change', async (event) => {
   const data = await fetch(`/wods/${event.target.value}`);
   const html = await data.text();
   console.log(html);
-  window.document.innerHTML += html;
+  container.innerHTML = html;
 });

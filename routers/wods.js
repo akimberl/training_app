@@ -13,7 +13,7 @@ const CheckUser = (req, res, next) => {
 
 router.get('/:id', CheckUser, async (req, res) => {
   const wods = await Wod.find({ type: req.params.id });
-  res.render('index', { user: res.locals.user, wods, layout: false });
+  res.render('wods', { user: res.locals.user, wods, layout: false });
 });
 
 module.exports = router;
