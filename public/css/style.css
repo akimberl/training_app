@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 32px;
+  border-bottom: 2px solid silver;
+  background-color: rgb(52, 73, 94, 0.5); /* последнее 0.5 регилурет прозрачность */
+  color: #32ff7e;
+  border-color: #32ff7e;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+}
+
+.headerPart {
+  margin: 0 15px;
+  font-size: 0.7em;
+}
+
+.pageName {
+  margin: 0 15px;
+}
+
+.pageDescription {
+  font-size: 28px;
+  color: #3ae374;
+}
+
+.choiceLine {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  background-color: rgb(220, 221, 225, 0.7);
+  padding: 5px;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+select {
+  font-size: 20px; 
+  height: 20px;
+}
+
+button {
+  padding: 3px;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 210px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgb(220, 221, 225, 0.7);
+}
+
+.formcontainer {
+  margin: 10px 25%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(220, 221, 225, 0.7);
+  border-radius: 10px;
+}
+
+.formcontainer input {
+  margin: 10px 0;
+  width: 100%;
+  max-width: 280px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  border-bottom: 3px solid #979997;
+
+
+  color: #313131;
+  padding: 2px;
+  font-size: 20px;
+  transition: 0.2s ease-out;
+  
+}
+
+.formcontainer input:focus {
+  background-color: rgba(255,255,255,0.8);
+  border-bottom: 3px solid #32ff7e;
+}
+button {
+  background-color: -internal-light-dark(rgba(148, 142, 142, 0.7), rgb(59, 59, 59));
+}
+
+.error {
+  border-bottom: 3px solid #32ff7e;
+}
+
+.formcontainer button {
+  width: 100px;
+  height: 40px;
+  padding: 2px;
+  margin-top: 10px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  min-width: 50px;
+  height: 40px;
+  font-size: 0.7em;
+  color:rgb(73, 72, 72);
+}
+
+.formcontainer button:active {
+  background-color: #757373;
+}
+
+.wodBox {
+  position: relative;
+  margin: 5px;
+  padding: 5px;
+  border: solid;
+  border-radius: 10px;
+  background-color: rgb(220, 221, 225, 1);
+  min-width: 250px;
+  min-height: 160px;
+
+}
+
+.wodHead {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.wodName {
+  background-color:rgba(75, 75, 75, 0.7);
+  color: rgba(58, 227, 116,1.0);
+  font-size: 14px;
+  padding: 3px 10px 3px 3px;
+}
+
+.rx {
+  right: 0;
+  font-size: 10px;
+}
+
+.format {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.wod {
+  font-size: 12px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.img {
+  color: rgba(58, 227, 116,1.0);
+  max-width: 280px;
+  max-height: 140px;
+  border-style: dotted;
+  border-color: rgba(58, 227, 116,1.0);
+  padding: 0;
+  margin: 2px;
+}
+
+.ChooseWod {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  margin: 5px;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+select {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(11, 46, 23, 0.6)
+}
+
+select:hover {
+  background-color: rgba(255,255,255,0.8);
+  color: black;
+  
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  background-color:#7f8fa699;
+  font-size: 16px;
+  font-family: Courier, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+a:hover {
+  color: #3ae374;
+}
+
+.a:visited {
+  color: #f4f4f4;
+}
+
+.elbrus {
+  color: black;
+}
+
+@media (max-width: 767px) {
+  header {
+    font-size: 26px;
+  }
+  .pageDescription {
+    font-size: 22px;
+  }
+
+  .choiceLine {
+    font-size: 16px;
+  }
+
+  .choose {
+    height: 100%;
+    font-size: 14px;
+  }
+  
+  select {
+    font-size: 14px;
+    height: 16px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 1px;
+  }
+
+  footer {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="header">
+  {{#if user}}
+  <div class="pageName"><a href="/">Meet the Girls, {{user.name}}</a></div>
+  {{else}}
+  <div class="pageName"><a href="/">Meet the Girls</a></div>
+  {{/if}}
+  <div class="btnLogReg">
+    {{#if user}}
+      <a class="headerPart" href="/profile/{{user._id}}">Profile</a>
+      <a class="headerPart" href="/logout">logout</a>
+    {{else}}
+      <a class="headerPart" href="/login" class="tinyBtn">login</a>
+      <a class="headerPart" href="/registration" class="tinyBtn">register</a>
+    {{/if}}
+  </div>
+</div>
