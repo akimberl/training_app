@@ -11,6 +11,8 @@ const indexRouter = require('./routers/index');
 const loginRouter = require('./routers/login');
 const regRouter = require('./routers/registration');
 const wodsRouter = require('./routers/wods');
+const profileRouter = require('./routers/profile');
+const resultsRouter = require('./routers/results');
 
 // middleware for reslocals
 function resLocal(app) {
@@ -26,6 +28,8 @@ function routers(app) {
   app.use('/login', loginRouter);
   app.use('/registration', regRouter);
   app.use('/wods', wodsRouter);
+  app.use('/profile', profileRouter);
+  app.use('/results', resultsRouter);
   app.get('/logout', (req, res, next) => {
     req.session.destroy();
     res.redirect('/');

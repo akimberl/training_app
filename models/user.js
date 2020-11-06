@@ -7,12 +7,10 @@ const UserSchema = mongoose.Schema({
   },
   city: {
     type: String,
-    require: true,
-    unique: true,
+    required: true,
   },
   results: [{
-    type: mongoose.ObjectId,
-    ref: 'Wod',
+    type: Object,
   }],
 });
 

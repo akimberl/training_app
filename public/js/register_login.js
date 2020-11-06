@@ -34,8 +34,9 @@ document.addEventListener('submit', async (event) => {
     const { city } = document.registrationForm;
 
     /* check if all inputs filled */
-    if (!(name || city)) {
+    if (!(name.value && city.value)) {
       error.innerText = 'Please, fill all the inputs';
+      return;
     }
 
     const data = await fetch('/registration', {

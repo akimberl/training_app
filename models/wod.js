@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const WodSchema = mongoose.Schema({
   type: {
     type: String,
-    require: true,
+    required: true,
   },
   name: {
     type: String,
-    require: true,
+    required: true,
     unique: true,
   },
   rx: {
@@ -19,10 +19,9 @@ const WodSchema = mongoose.Schema({
   wod: [{
     type: String,
   }],
-  users: {
-    type: mongoose.ObjectId,
-    ref: 'User',
-  },
+  results: [{
+    type: Object,
+  }],
 });
 
 module.exports = mongoose.model('Wod', WodSchema);

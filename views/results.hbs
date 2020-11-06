@@ -1,0 +1,24 @@
+<div class="container result">
+  <div class="wodBox">
+    <div class="wodHead">
+      <div class="wodName">{{wod.name}}</div>
+      <div class="rx">{{wod.rx}}</div>
+    </div>
+    <div class="format">{{wod.format}}</div>
+    <div class="wod">
+      {{#each wod.wod}}
+      <li>{{this}}</li>
+      {{/each}}
+    </div>
+  </div>
+  <div class="resultInput">
+    <form name="result" target="/results/{{this._id}}" method="POST">
+      <input type="text" name="results" placeholder="write your results here"/>
+
+      {{!-- <textarea name="results" class="resultArea" placeholder="Write your results here" rows="8" cols="50"></textarea> --}}
+      <br>
+      <button type="submit" style="font-fize: 16px;">Submit</button>
+    </form>
+  </div>
+</div>
+
