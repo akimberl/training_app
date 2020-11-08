@@ -1,5 +1,6 @@
+const key = document.querySelector('.hiddenKey').id;
 const api = {
-  key: 'b405e2627e2fa30bce2d629768973bcb', // api from https://openweathermap.org/
+  key, // api from https://openweathermap.org/
   baseurl: 'https://api.openweathermap.org/data/2.5/',
 };
 

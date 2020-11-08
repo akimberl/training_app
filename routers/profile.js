@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 
 const router = express.Router();
@@ -11,7 +12,8 @@ const CheckUser = (req, res, next) => {
 };
 
 router.get('/:id', CheckUser, async (req, res) => {
-  res.render('profile', { user: res.locals.user, layout: false });
+  const key = process.env.WEATHER_KEY;
+  res.render('profile', { key, user: res.locals.user, layout: false });
 });
 
 module.exports = router;

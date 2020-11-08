@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const Wod = require('../models/wod');
 
@@ -13,7 +14,7 @@ const CheckUser = (req, res, next) => {
 
 router.get('/:id', CheckUser, async (req, res) => {
   const wod = await Wod.findOne({ _id: req.params.id });
-  res.render('results', { wod });
+  res.render('results', { key: process.env.GOOGLE_API, wod });
 });
 
 router.post('/:id', CheckUser, async (req, res) => {
