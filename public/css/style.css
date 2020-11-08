@@ -71,8 +71,26 @@ select {
 }
 .container.result {
   display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 18%;
+  flex-wrap: wrap;
+}
+
+.containerWithMap {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#map {
+  margin: 10px;
+  height: 500px;
+  /* The height is 400 pixels */
+
+  width: 70%;
+  border-radius: 10px;
 }
 
 .formcontainer {
@@ -84,6 +102,7 @@ select {
   background-color: rgb(220, 221, 225, 0.7);
   border-radius: 10px;
 }
+
 .formName {
   font-family: 'montserrat', sans-serif;
   color: rgba(48, 48, 48, 0.7);
@@ -148,7 +167,7 @@ button {
   border: solid;
   border-radius: 10px;
   background-color: rgb(220, 221, 225, 1);
-  min-width: 250px;
+  min-width: 220px;
   min-height: 160px;
 
 }
